@@ -3,32 +3,28 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Roboto+Flex:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
 :root {
-  --gradient: linear-gradient(
-    45deg,
-    #845ec2,
-    #d65db1,
-    #ff6f91,
-    #ff9671,
-    #ffc75f,
-    #f9f871
-  );
+  /*global color*/
+  --gradient: linear-gradient(45deg, #28ad99, #ffca62, #e56d45);
 
-  --neutral-50-white: #fff;
-  --neutral-100-table-header: #f8f8fc;
-  --neutral-200-background: #f3f3f7;
-  --neutral-300-divider: #e4e5f0;
-  --neutral-400-disable: #dcdee9;
-  --neutral-500-border: #bcbfd6;
-  --neutral-600-placeholder: #a7abc3;
-  --neutral-700-text-secondary: #82869e;
-  --neutral-800-text-primary: #434657;
-  --neutral-900-text-title: #1b1d29;
+  --neutral-25: #fcfcfd;
+  --neutral-50: #f8fafc;
+  --neutral-100: #eef2f6;
+  --neutral-200: #e3e8ef;
+  --neutral-300: #cdd5df;
+  --neutral-400: #9aa4b2;
+  --neutral-500: #697586;
+  --neutral-600: #4b5565;
+  --neutral-700: #364152;
+  --neutral-800: #202939;
+  --neutral-900: #121926;
+  --neutral-950: #0d121c;
 
-  --neutral-50: #6c7686;
-  --neutral-100: #555e6d;
-  --neutral-200: #3d4655;
-  --neutral-300: #27303e;
+  /*semantic color*/
+  --text-primary: var(--neutral-800);
+  --text-secondary: var(--neutral-600);
+  --text-tertiary: var(--neutral-500);
 }
 
 *,
@@ -43,9 +39,11 @@
 body {
   display: flex;
   flex-direction: column;
+}
 
-  font-weight: normal;
-  font-family: 'Urbanist', sans-serif;
+.container {
+  max-width: 1920px;
+  padding: 8rem;
 }
 
 .flex-center {
@@ -86,106 +84,109 @@ body {
 /* FONT-SIZE */
 
 /* used for display*/
-.text-5xl {
-  font-size: 4.5rem;
-  line-height: 5.625rem;
+.text-display-3 {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 6.5rem;
+  font-weight: 400;
+  line-height: 130%;
   letter-spacing: -2%;
+
+  color: var(--text-primary);
 }
 
-/* used for page title*/
-.text-4xl {
+.text-display-2 {
+  font-family: 'Cormorant Upright', serif;
   font-size: 3rem;
-  line-height: 3.75rem;
-  letter-spacing: -2%;
-}
-
-/* used for card title*/
-.text-3xl {
-  font-size: 2.875rem;
-  line-height: 3.5rem;
-  letter-spacing: -2%;
-}
-
-/* used for headline of paragraph*/
-.text-2xl {
-  font-size: 1.875rem;
-  line-height: 2.375rem;
-  letter-spacing: -2%;
-}
-
-/* used for page description, big caption*/
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 2rem;
-}
-
-/* used for large button text*/
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-/* used for card description, base content, small button text */
-.text-md {
-  font-size: 1rem;
-  line-height: 1.75rem;
-}
-
-/* used for chip, caption, overline */
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.75rem;
-}
-
-p,
-li,
-b {
-  line-height: 1.75rem;
-  font-size: 1rem;
-
-  color: var(--neutral-300);
-}
-
-.heading {
-  font-size: 3rem;
-  line-height: 3.75rem;
+  font-weight: 300;
+  line-height: 130%;
   letter-spacing: -2%;
 
-  font-size: clamp(2rem, 5.25vw, 3rem);
+  color: var(--text-primary);
 }
 
-.subheading {
-  font-size: 1.25rem;
-  line-height: 2rem;
-
-  color: var(--neutral-200);
+.text-display-1 {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 2.25rem;
   font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -2%;
+
+  color: var(--text-primary);
 }
 
-.caption {
-  font-size: 0.875rem;
-  line-height: 1.75rem;
+/* used for body text*/
+.text-body-1 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -2%;
 
-  color: var(--neutral-100);
-  font-weight: 500;
-  text-align: center;
+  color: var(--text-secondary);
 }
-.tag__container {
+
+.text-body-2 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -2%;
+
+  color: var(--text-secondary);
+}
+
+/* used for highlight text*/
+.highlight-text {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -2%;
+
+  color: var(--text-secondary);
+}
+
+b {
+  font-weight: 500 !important;
+}
+
+li {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -2%;
+
+  color: var(--text-secondary);
+}
+
+.tag-1 {
   display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-  margin: 8px 0;
+  align-items: center;
+  width: fit-content;
+  gap: 6px;
+
+  padding: 4px 12px 4px 10px;
+  border-radius: 9999px;
+
+  font-size: 1.125rem;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  line-height: 130%;
+
+  border: 1px solid;
+  border-radius: 100;
+  border-color: #abefc6;
+  color: #067647;
+  background-color: #ecfdf3;
 }
 
-.tag {
-  padding: 8px 16px;
-  border-radius: 8px;
-  margin-right: 4px;
-  margin-bottom: 4px;
-
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: var(--neutral-300);
+.tag-1::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #17b26a;
 }
 
 li span {
@@ -211,22 +212,6 @@ button {
   cursor: pointer;
 }
 
-.btn-lg {
-  height: 64px;
-}
-
-.btn-md {
-  height: 56px;
-}
-
-.btn-md svg {
-  transform: scale(0.8);
-}
-
-.btn-md svg rect {
-  stroke: white;
-}
-
 path {
   stroke: var(--neutral-300);
 }
@@ -235,29 +220,16 @@ a:hover path {
   fill: var(--neutral-300);
 }
 
-button path {
-  stroke: #fff;
-}
-
-button svg {
-  margin-left: 8px;
-}
-
 /* nav starting */
-
-ol {
-  padding-left: 20px;
-}
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-
-  width: 100px;
-  height: 100vh;
-  position: fixed;
+  width: 100vh;
+  height: 80px;
+  position: absolute;
+  top: 0;
 
   /* background: rgba(255, 255, 255, 0.4); */
   /* background-image: linear-gradient(
